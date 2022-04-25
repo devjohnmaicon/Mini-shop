@@ -1,5 +1,7 @@
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Card } from './Card';
 import { Head } from './Head';
 
 export const Produtos = () => {
@@ -14,36 +16,12 @@ export const Produtos = () => {
   if (produtos === null) return null;
 
   return (
-    <div
-      style={{
-        // backgroundColor: 'red',
-        position: 'relative',
-        height: '700px',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(3, 1fr)',
-        // gridTemplateRows: 'repeat(5, 1fr)',
-        gridColumnGap: '0px',
-        gridRowGap: '0px',
-      }}
-    >
+    <SimpleGrid columns={3} spacing='25px'>
       <Head title={`shopTech`} />
 
       {produtos.map((produto) => (
-        <Link
-          to={`produto/${produto.id}`}
-          key={produto.id}
-          style={{ width: '300px', display: 'flex', flexDirection: 'column' }}
-        >
-          <h2>{produto.nome}</h2>
-          <img
-            style={{ maxWidth: '110px' }}
-            src={produto.fotos[0].src}
-            alt=''
-          />
-          {/* <p style={{ width: '50px' }}>{produto.descricao}</p> */}
-          <span>{`R$ ${produto.preco}`}</span>
-        </Link>
+        <Card key={produto.id} produto={produto} />
       ))}
-    </div>
+    </SimpleGrid>
   );
 };
