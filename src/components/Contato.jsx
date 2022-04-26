@@ -6,7 +6,7 @@ import { Head } from './Head';
 
 export const Contato = () => {
   return (
-    <HStack>
+    <HStack className='animate__animated animate__backInUp' py={10}>
       <Head title='ShopTech | Contato' description='Entre em contato' />
 
       <HStack

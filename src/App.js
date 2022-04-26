@@ -8,7 +8,7 @@ import { Produtos } from './components/Produtos';
 
 function App() {
   return (
-    <VStack w='full' h='100vh' justifyContent='space-between'>
+    <VStack w='full' h='100vh' justifyContent='space-between' overflow='hidden'>
 
       <Container maxW='container.lg'>
         <Header />

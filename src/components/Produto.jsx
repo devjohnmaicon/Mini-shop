@@ -41,13 +41,16 @@ export const Produto = () => {
         w={950}
         boxShadow='-5px 7px 16px -2px #000000'
         borderRadius='lg'
+        className='animate__animated animate__fadeInLeftBig'
       >
         {produto.fotos.map((foto) => (
           <Image src={foto.src} key={foto.src} alt='' />
         ))}
       </HStack>
 
-      <VStack p={10}>
+      <VStack p={10} 
+        className='animate__animated animate__fadeInRightBig'
+        >
         <Heading fontSize={52}>{produto.nome}</Heading>
         <Text fontSize={20} p={5}>
           {produto.descricao}

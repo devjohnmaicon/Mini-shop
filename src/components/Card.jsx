@@ -21,6 +21,7 @@ export const Card = ({ produto }) => {
       cursor='pointer'
       onClick={redirect}
       justifyContent='center'
+      className='animate__animated animate__fadeIn'
     >
       <Image src={produto.fotos[0].src} boxSize='320px' w='full' objectFit='cover' />
 
