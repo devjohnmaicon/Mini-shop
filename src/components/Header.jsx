@@ -1,12 +1,20 @@
-import { HStack, Link, Stack } from '@chakra-ui/react';
 import React from 'react';
+import { ButtonGroup } from '@chakra-ui/react';
+
 import { NavLink } from 'react-router-dom';
+
+import '../style.css';
 
 export const Header = () => {
   return (
-    <Stack p={6} direction='row' align='start'>
-      <NavLink to='/'>Produtos</NavLink>
-      <NavLink to='contato'>Contato</NavLink>
-    </Stack>
+    <ButtonGroup py={6} direction='row' align='start' gap={4}>
+      <NavLink className='link' to='/'>
+        Produtos
+      </NavLink>
+
+      <NavLink className='link' to='contato'>
+        Contato
+      </NavLink>
+    </ButtonGroup>
   );
 };

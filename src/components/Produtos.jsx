@@ -16,7 +16,7 @@ export const Produtos = () => {
   if (produtos === null) return null;
 
   return (
-    <SimpleGrid columns={3} spacing='25px'>
+    <SimpleGrid columns={[1, 2, 3]} spacing={['10px', '15px','20px' ]}>
       <Head title={`shopTech`} />
 
       {produtos.map((produto) => (

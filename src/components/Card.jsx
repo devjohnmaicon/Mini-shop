@@ -20,8 +20,9 @@ export const Card = ({ produto }) => {
       overflow='hidden'
       cursor='pointer'
       onClick={redirect}
+      justifyContent='center'
     >
-      <Image src={produto.fotos[0].src} boxSize='320px' objectFit='cover' />
+      <Image src={produto.fotos[0].src} boxSize='320px' w='full' objectFit='cover' />
 
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
